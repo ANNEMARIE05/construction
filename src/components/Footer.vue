@@ -7,7 +7,7 @@
         <div class="lg:col-span-2">
           <div class="flex items-center space-x-2 mb-6">
             <div
-              class="w-10 h-10 rounded- bg-white flex items-center justify-center glow-effect"
+              class="w-10 h-10 rounded bg-white flex items-center justify-center glow-effect"
             >
               <img src="../assets/logo.png" alt="" />
             </div>

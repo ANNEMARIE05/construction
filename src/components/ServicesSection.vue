@@ -39,8 +39,4 @@
 import { servicesData } from '@/data/mockData'
 
 const services = servicesData
-
-const emit = defineEmits<{
-  openQuoteModal: []
-}>()
 </script>

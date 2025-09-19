@@ -43,8 +43,8 @@
 
     <!-- Navigation Dots -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
-      <div class="w-2 h-2 bg-white "></div>
-      <div class="w-2 h-2 bg-white/50 "></div>
+      <div class="w-2 h-2 bg-white"></div>
+      <div class="w-2 h-2 bg-white/50"></div>
     </div>
   </section>
 </template>
