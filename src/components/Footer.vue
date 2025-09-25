@@ -198,11 +198,10 @@
 
 <script setup lang="ts">
 const quickLinks = [
-  { name: "Accueil", href: "/" },
-  { name: "À propos", href: "/about" },
-  { name: "Nos engins", href: "/equipment" },
-  { name: "Services", href: "/services" },
-  { name: "Contact", href: "/contact" },
-  { name: "Blog", href: "/blog" },
+  { name: "ACCUEIL", href: "/" },
+  { name: "À PROPOS", href: "/about" },
+  { name: "NOS CONSTRUCTIONS", href: "/constructions" },
+  { name: "ÉQUIPEMENT", href: "/equipment" },
+  { name: "CONTACT", href: "/contact" },
 ];
 </script>

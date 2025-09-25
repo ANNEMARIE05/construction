@@ -40,7 +40,7 @@
     <!-- Main Navigation Bar -->
     <nav class="bg-gray-900 text-white transition-all duration-300" :class="scrolled ? 'shadow-lg' : ''">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
+        <div class="flex items-center h-16">
           <!-- Logo -->
           <div class="flex items-center">
             <router-link to="/" class="flex items-center space-x-3 group">
@@ -51,13 +51,13 @@
             </router-link>
           </div>
 
-          <!-- Navigation Links -->
-          <div class="hidden md:flex items-center space-x-8">
+          <!-- Navigation Links - Centered -->
+          <div class="hidden md:flex items-center space-x-4 flex-1 justify-center">
             <router-link 
               v-for="item in navigationItems" 
               :key="item.name"
               :to="item.href"
-              class="constructo-text transition-colors duration-300 relative group px-3 py-2"
+              class="constructo-text transition-colors duration-300 relative group px-2 py-2"
               :class="isActiveRoute(item.href) 
                 ? 'bg-yellow-400 text-gray-900' 
                 : 'text-white hover:text-yellow-400'"
@@ -131,9 +131,10 @@ const mobileMenuOpen = ref(false)
 const $route = useRoute()
 
 const navigationItems = [
-  { name: 'HOME', href: '/' },
-  { name: 'ABOUT', href: '/about' },
-  { name: 'ENGIN', href: '/equipment' },
+  { name: 'ACCUEIL', href: '/' },
+  { name: 'À PROPOS', href: '/about' },
+  { name: 'NOS CONSTRUCTIONS', href: '/constructions' },
+  { name: 'ÉQUIPEMENT', href: '/equipment' },
   { name: 'CONTACT', href: '/contact' }
 ]
 

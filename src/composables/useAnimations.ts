@@ -9,7 +9,12 @@ export function useScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate-fade-in')
+        const animationType = entry.target.getAttribute('data-animate')
+        if (animationType) {
+          entry.target.classList.add(animationType)
+        } else {
+          entry.target.classList.add('animate-fade-in')
+        }
         observer.unobserve(entry.target)
       }
     })

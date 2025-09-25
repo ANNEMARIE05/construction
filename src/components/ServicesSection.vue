@@ -18,7 +18,7 @@
           :style="`animation-delay: ${index * 0.1}s`"
         >
           <!-- Circular Icon -->
-          <div class="w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <div class="w-24 h-24 bg-yellow-400 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
             <span class="text-3xl text-gray-900">{{ service.icon }}</span>
           </div>
 

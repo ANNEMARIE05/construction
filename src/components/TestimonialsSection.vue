@@ -23,7 +23,7 @@
               :key="testimonial.id"
               class="w-full flex-shrink-0 px-4"
             >
-              <div class="bg-gray-700 p-8 md:p-12 text-center max-w-4xl mx-auto">
+              <div class="bg-gray-700 p-8 md:p-12 text-center max-w-4xl mx-auto rounded-lg">
                 <!-- Quote Icon -->
                 <div class="w-16 h-16 bg-yellow-400/20 flex items-center justify-center mx-auto mb-8">
                   <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">

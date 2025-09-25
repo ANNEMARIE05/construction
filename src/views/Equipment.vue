@@ -135,7 +135,7 @@
           <div 
             v-for="(equipment, index) in filteredAndSortedEquipment" 
             :key="equipment.id"
-            class="group bg-gray-800 overflow-hidden hover-lift transition-all duration-300 hover:bg-gray-700"
+            class="group bg-gray-800 overflow-hidden hover-lift transition-all duration-300 hover:bg-gray-700 rounded-lg"
             :class="`animate-slide-up`"
             :style="`animation-delay: ${index * 0.05}s`"
           >
