@@ -456,7 +456,7 @@ import { useScrollAnimations } from '../composables/useAnimations'
 import ConstructionDetailsModal from '../components/ConstructionDetailsModal.vue'
 
 // Initialize scroll animations
-const { observeElements } = useScrollAnimations()
+useScrollAnimations()
 
 // Modal state
 const isDetailsModalOpen = ref(false)
@@ -690,32 +690,29 @@ const contactUs = () => {
   console.log('Contact us')
 }
 
-const requestSimilarProject = (construction: Construction) => {
-  emit('openQuoteModal')
-}
 
 const openQuoteModal = () => {
   emit('openQuoteModal')
 }
 
 // Color functions for different categories - using equipment-style colors
-const getCardColorClass = (category: string) => {
+const getCardColorClass = (_category: string) => {
   return 'bg-gray-800'
 }
 
-const getTextColorClass = (category: string) => {
+const getTextColorClass = (_category: string) => {
   return 'text-gray-300'
 }
 
-const getIconColorClass = (category: string) => {
+const getIconColorClass = (_category: string) => {
   return 'text-yellow-400'
 }
 
-const getPriceColorClass = (category: string) => {
+const getPriceColorClass = (_category: string) => {
   return 'text-white'
 }
 
-const getButtonColorClass = (category: string) => {
+const getButtonColorClass = (_category: string) => {
   return 'bg-yellow-400 hover:bg-yellow-500 text-gray-900'
 }
 

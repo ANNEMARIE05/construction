@@ -228,7 +228,7 @@ interface Props {
   construction: Construction | null
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 
 const emit = defineEmits<{
   close: []
