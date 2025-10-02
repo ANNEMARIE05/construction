@@ -7,13 +7,13 @@
         alt="Construction site background"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-gray-900/60"></div>
+      <div class="absolute inset-0 bg-slate-800/40"></div>
     </div>
 
     <!-- Content -->
     <div class="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       <div class="animate-fade-in">
-        <p class="text-yellow-400 text-lg sm:text-xl font-medium mb-4 animate-slide-bounce">
+        <p class="text-amber-400 text-lg sm:text-xl font-medium mb-4 animate-slide-bounce">
           QUALITÉ SUPÉRIEURE
         </p>
         <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 constructo-heading animate-scale-in" style="animation-delay: 0.2s;">
@@ -27,7 +27,7 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style="animation-delay: 0.8s;">
           <button 
             @click="scrollToEquipment"
-            class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 font-semibold transition-all duration-300"
+            class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-800 px-8 py-4 font-semibold transition-all duration-300"
           >
             VOIR NOS ENGINS
           </button>

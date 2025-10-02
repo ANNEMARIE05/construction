@@ -9,7 +9,7 @@
         <!-- Close Button -->
         <button 
           @click="close"
-          class="absolute top-4 right-4 z-10 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-700 transition-colors"
+          class="absolute top-4 right-4 z-10 bg-slate-200 text-slate-700 rounded-full p-2 hover:bg-slate-300 transition-colors"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -17,12 +17,12 @@
         </button>
 
         <!-- Content -->
-        <div v-if="construction" class="p-0">
+        <div v-if="realisation" class="p-0">
           <!-- Main Image -->
           <div class="relative h-96 w-full">
             <img 
-              :src="construction.image" 
-              :alt="construction.name"
+              :src="realisation.image" 
+              :alt="realisation.name"
               class="w-full h-full object-cover rounded-t-lg"
               @error="handleImageError"
               loading="lazy"
@@ -31,13 +31,13 @@
             <div class="absolute top-4 left-4">
               <span 
                 class="px-4 py-2 text-sm font-semibold rounded"
-                :class="construction.status === 'Terminé' 
+                :class="realisation.status === 'Terminé' 
                   ? 'bg-green-500 text-white' 
-                  : construction.status === 'En cours'
+                  : realisation.status === 'En cours'
                   ? 'bg-yellow-500 text-white'
                   : 'bg-blue-500 text-white'"
               >
-                {{ construction.status }}
+                {{ realisation.status }}
               </span>
             </div>
             <!-- Rating -->
@@ -46,7 +46,7 @@
                 <svg class="w-5 h-5 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <span class="text-gray-800 font-medium">{{ construction.rating }}</span>
+                <span class="text-gray-800 font-medium">{{ realisation.rating }}</span>
               </div>
             </div>
           </div>
@@ -57,17 +57,17 @@
             <div class="mb-8">
               <div class="flex items-start justify-between mb-4">
                 <div>
-                  <h2 class="text-4xl font-bold text-gray-900 mb-3">{{ construction.name }}</h2>
+                  <h2 class="text-4xl font-bold text-gray-900 mb-3">{{ realisation.name }}</h2>
                   <div class="flex items-center text-gray-600 mb-4">
                     <svg class="w-6 h-6 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                     </svg>
-                    <span class="text-xl font-medium">{{ construction.location }}</span>
+                    <span class="text-xl font-medium">{{ realisation.location }}</span>
                   </div>
                 </div>
                 <div class="text-right">
                   <div class="text-5xl font-bold text-gray-900 mb-2">
-                    {{ (construction.budget / 1000000).toFixed(0) }}M
+                    {{ (realisation.budget / 1000000).toFixed(0) }}M
                   </div>
                   <div class="text-lg text-gray-600">FCFA</div>
                 </div>
@@ -77,7 +77,7 @@
             <!-- Description -->
             <div class="mb-8">
               <h3 class="text-xl font-semibold text-gray-900 mb-3">Description du projet</h3>
-              <p class="text-gray-600 leading-relaxed">{{ construction.description }}</p>
+              <p class="text-gray-600 leading-relaxed">{{ realisation.description }}</p>
             </div>
 
             <!-- Project Details -->
@@ -93,7 +93,7 @@
                       </svg>
                       <span class="font-semibold text-gray-900">Capacité</span>
                     </div>
-                    <span class="text-gray-600">{{ construction.features.length }} chambres</span>
+                    <span class="text-gray-600">{{ realisation.features.length }} chambres</span>
                   </div>
                   
                   <div class="bg-gray-50 p-4 rounded-lg">
@@ -103,7 +103,7 @@
                       </svg>
                       <span class="font-semibold text-gray-900">Durée</span>
                     </div>
-                    <span class="text-gray-600">{{ construction.duration }}</span>
+                    <span class="text-gray-600">{{ realisation.duration }}</span>
                   </div>
                   
                   <div class="bg-gray-50 p-4 rounded-lg">
@@ -113,7 +113,7 @@
                       </svg>
                       <span class="font-semibold text-gray-900">Progression</span>
                     </div>
-                    <span class="text-gray-600">{{ construction.completion }}%</span>
+                    <span class="text-gray-600">{{ realisation.completion }}%</span>
                   </div>
                   
                   <div class="bg-gray-50 p-4 rounded-lg">
@@ -123,17 +123,17 @@
                       </svg>
                       <span class="font-semibold text-gray-900">Début</span>
                     </div>
-                    <span class="text-gray-600">{{ formatDate(construction.startDate) }}</span>
+                    <span class="text-gray-600">{{ formatDate(realisation.startDate) }}</span>
                   </div>
                   
-                  <div v-if="construction.endDate" class="bg-gray-50 p-4 rounded-lg">
+                  <div v-if="realisation.endDate" class="bg-gray-50 p-4 rounded-lg">
                     <div class="flex items-center mb-2">
                       <svg class="w-6 h-6 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
                       </svg>
                       <span class="font-semibold text-gray-900">Fin</span>
                     </div>
-                    <span class="text-gray-600">{{ formatDate(construction.endDate) }}</span>
+                    <span class="text-gray-600">{{ formatDate(realisation.endDate) }}</span>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@
                 <h3 class="text-2xl font-semibold text-gray-900 mb-6">Caractéristiques</h3>
                 <div class="space-y-3">
                   <div 
-                    v-for="feature in construction.features" 
+                    v-for="feature in realisation.features" 
                     :key="feature"
                     class="flex items-center p-3 bg-gray-50 rounded-lg"
                   >
@@ -162,8 +162,8 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="relative overflow-hidden rounded-lg shadow-lg">
                   <img 
-                    :src="getDetailImage1(construction.category)" 
-                    :alt="construction.name + ' - Détail 1'"
+                    :src="getDetailImage1(realisation.category)" 
+                    :alt="realisation.name + ' - Détail 1'"
                     class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
                     @error="handleImageError"
                     loading="lazy"
@@ -172,8 +172,8 @@
                 </div>
                 <div class="relative overflow-hidden rounded-lg shadow-lg">
                   <img 
-                    :src="getDetailImage2(construction.category)" 
-                    :alt="construction.name + ' - Détail 2'"
+                    :src="getDetailImage2(realisation.category)" 
+                    :alt="realisation.name + ' - Détail 2'"
                     class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
                     @error="handleImageError"
                     loading="lazy"
@@ -206,7 +206,7 @@
 </template>
 
 <script setup lang="ts">
-interface Construction {
+interface Realisation {
   id: number
   name: string
   description: string
@@ -225,7 +225,7 @@ interface Construction {
 
 interface Props {
   isOpen: boolean
-  construction: Construction | null
+  realisation: Realisation | null
 }
 
 defineProps<Props>()
@@ -250,7 +250,7 @@ const contactUs = () => {
 
 const handleImageError = (event: Event) => {
   const img = event.target as HTMLImageElement
-  // Fallback vers une image de construction par défaut en cas d'erreur
+  // Fallback vers une image de realisation par défaut en cas d'erreur
   img.src = 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&h=300&fit=crop'
 }
 

@@ -18,7 +18,7 @@ const closeQuoteModal = () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white">
+  <div class="min-h-screen bg-slate-50">
     <Navigation @open-quote-modal="openQuoteModal" />
     <main class="pt-24">
       <RouterView @open-quote-modal="openQuoteModal" />

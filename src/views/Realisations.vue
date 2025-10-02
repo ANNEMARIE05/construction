@@ -5,13 +5,13 @@
       <div class="absolute inset-0">
         <img 
           src="../assets/grue-industrielle-ciel-bleu.webp" 
-          alt="Constructions"
+          alt="Réalisations"
           class="w-full h-full object-cover opacity-20"
         />
       </div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-          Nos <span class="gradient-text">Constructions</span>
+          Nos <span class="gradient-text">Réalisations</span>
         </h1>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
           Découvrez nos réalisations et projets de construction en Côte d'Ivoire
@@ -29,7 +29,7 @@
               <input 
                 v-model="searchQuery"
                 type="text" 
-                placeholder="Rechercher un projet, une ville ou un type de construction..."
+                placeholder="Rechercher un projet, une ville ou un type de réalisation..."
                 class="w-full px-6 py-4 pl-14 bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-lg shadow-lg"
               />
               <svg class="absolute left-5 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@
         <div class="flex flex-col xl:flex-row gap-6 items-start xl:items-center justify-between">
           <!-- Category Filter -->
           <div class="w-full xl:w-auto">
-            <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Types de construction</h3>
+            <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wide">Types de réalisation</h3>
             <div class="flex flex-wrap gap-2">
               <button 
                 v-for="category in categories" 
@@ -88,7 +88,7 @@
             <!-- Results Count -->
             <div class="flex items-center">
               <span class="text-gray-400 text-sm">
-                {{ filteredAndSortedConstructions.length }} projet{{ filteredAndSortedConstructions.length > 1 ? 's' : '' }} trouvé{{ filteredAndSortedConstructions.length > 1 ? 's' : '' }}
+                {{ filteredAndSortedRealisations.length }} projet{{ filteredAndSortedRealisations.length > 1 ? 's' : '' }} trouvé{{ filteredAndSortedRealisations.length > 1 ? 's' : '' }}
               </span>
             </div>
           </div>
@@ -129,13 +129,13 @@
       </div>
     </section>
 
-    <!-- Constructions Grid -->
-    <section class="py-20 bg-gray-900">
+    <!-- Realisations Grid -->
+    <section class="py-20 bg-slate-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-white">
-            Nos <span class="gradient-text">Constructions</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-800">
+            Nos <span class="gradient-text">Réalisations</span>
           </h2>
         </div>
 
@@ -144,43 +144,43 @@
           <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-400"></div>
         </div>
 
-        <!-- Construction Cards -->
+        <!-- Realisation Cards -->
         <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div 
-            v-for="(construction, index) in filteredAndSortedConstructions" 
-            :key="construction.id"
+            v-for="(realisation, index) in filteredAndSortedRealisations" 
+            :key="realisation.id"
             class="group rounded overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-            :class="getCardColorClass(construction.category)"
+            :class="getCardColorClass(realisation.category)"
             :data-animate="index % 2 === 0 ? 'animate-fade-up-right' : 'animate-fade-up-left'"
             :style="`animation-delay: ${index * 0.1}s`"
           >
                 <!-- Image -->
                 <div class="relative overflow-hidden h-64">
                   <img 
-                    :src="construction.image" 
-                    :alt="construction.name"
+                    :src="realisation.image" 
+                    :alt="realisation.name"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <!-- Status Badge -->
                   <div class="absolute top-4 right-4">
                     <span 
                       class="px-3 py-1 text-xs font-semibold rounded-full"
-                      :class="construction.status === 'Terminé' 
+                      :class="realisation.status === 'Terminé' 
                         ? 'bg-green-500 text-white' 
-                        : construction.status === 'En cours'
+                        : realisation.status === 'En cours'
                         ? 'bg-yellow-500 text-white'
                         : 'bg-blue-500 text-white'"
                     >
-                      {{ construction.status }}
+                      {{ realisation.status }}
                     </span>
                   </div>
                   <!-- Rating -->
                   <div class="absolute top-4 left-4">
                     <div class="flex items-center bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full">
-                      <svg class="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <svg class="w-4 h-4 text-amber-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
-                      <span class="text-gray-800 text-sm font-medium">{{ construction.rating }}</span>
+                      <span class="text-gray-800 text-sm font-medium">{{ realisation.rating }}</span>
                     </div>
                   </div>
                 </div>
@@ -188,47 +188,47 @@
                 <!-- Content -->
                 <div class="p-6">
                   <!-- Location -->
-                  <div class="flex items-center text-sm mb-3" :class="getTextColorClass(construction.category)">
-                    <svg class="w-4 h-4 mr-2" :class="getIconColorClass(construction.category)" fill="currentColor" viewBox="0 0 20 20">
+                  <div class="flex items-center text-sm mb-3" :class="getTextColorClass(realisation.category)">
+                    <svg class="w-4 h-4 mr-2" :class="getIconColorClass(realisation.category)" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                     </svg>
-                    {{ construction.location }}
+                    {{ realisation.location }}
                   </div>
 
                   <!-- Project Details -->
-                  <div class="flex items-center gap-4 mb-4 text-sm" :class="getTextColorClass(construction.category)">
+                  <div class="flex items-center gap-4 mb-4 text-sm" :class="getTextColorClass(realisation.category)">
                     <div class="flex items-center">
-                      <svg class="w-4 h-4 mr-1" :class="getIconColorClass(construction.category)" fill="currentColor" viewBox="0 0 20 20">
+                      <svg class="w-4 h-4 mr-1" :class="getIconColorClass(realisation.category)" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                       </svg>
-                      <span>{{ construction.features.length }} chambres</span>
+                      <span>{{ realisation.features.length }} chambres</span>
                     </div>
                     <div class="flex items-center">
-                      <svg class="w-4 h-4 mr-1" :class="getIconColorClass(construction.category)" fill="currentColor" viewBox="0 0 20 20">
+                      <svg class="w-4 h-4 mr-1" :class="getIconColorClass(realisation.category)" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
                       </svg>
-                      <span>{{ construction.duration }}</span>
+                      <span>{{ realisation.duration }}</span>
                     </div>
                     <div class="flex items-center">
-                      <svg class="w-4 h-4 mr-1" :class="getIconColorClass(construction.category)" fill="currentColor" viewBox="0 0 20 20">
+                      <svg class="w-4 h-4 mr-1" :class="getIconColorClass(realisation.category)" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
                       </svg>
-                      <span>{{ construction.completion }}%</span>
+                      <span>{{ realisation.completion }}%</span>
                     </div>
                   </div>
 
                   <!-- Price -->
                   <div class="mb-4">
-                    <span class="text-2xl font-bold" :class="getPriceColorClass(construction.category)">
-                      {{ (construction.budget / 1000000).toFixed(0) }}M FCFA
+                    <span class="text-2xl font-bold" :class="getPriceColorClass(realisation.category)">
+                      {{ (realisation.budget / 1000000).toFixed(0) }}M FCFA
                     </span>
                   </div>
 
                   <!-- Action Button -->
                   <button 
-                    @click="viewDetails(construction)"
+                    @click="viewDetails(realisation)"
                     class="w-full px-6 py-3 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg rounded"
-                    :class="getButtonColorClass(construction.category)"
+                    :class="getButtonColorClass(realisation.category)"
                   >
                     Voir les détails
                   </button>
@@ -237,7 +237,7 @@
         </div>
 
         <!-- No Results -->
-        <div v-if="filteredAndSortedConstructions.length === 0" class="text-center py-12">
+        <div v-if="filteredAndSortedRealisations.length === 0" class="text-center py-12">
           <div class="text-6xl mb-4">🏗️</div>
           <h3 class="text-2xl font-bold text-white mb-4">Aucun projet trouvé</h3>
           <p class="text-gray-400 mb-6">Essayez de modifier vos critères de recherche</p>
@@ -439,10 +439,10 @@
       </div>
     </section>
 
-    <!-- Construction Details Modal -->
-    <ConstructionDetailsModal 
+    <!-- Realisation Details Modal -->
+    <RealisationDetailsModal 
       :is-open="isDetailsModalOpen"
-      :construction="selectedConstruction"
+      :realisation="selectedRealisation"
       @close="closeDetailsModal"
       @request-quote="openQuoteModal"
       @contact-us="contactUs"
@@ -453,17 +453,17 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useScrollAnimations } from '../composables/useAnimations'
-import ConstructionDetailsModal from '../components/ConstructionDetailsModal.vue'
+import RealisationDetailsModal from '../components/RealisationDetailsModal.vue'
 
 // Initialize scroll animations
 useScrollAnimations()
 
 // Modal state
 const isDetailsModalOpen = ref(false)
-const selectedConstruction = ref<Construction | null>(null)
+const selectedRealisation = ref<Realisation | null>(null)
 const isLoading = ref(true)
 
-interface Construction {
+interface Realisation {
   id: number
   name: string
   description: string
@@ -484,8 +484,8 @@ const emit = defineEmits<{
   openQuoteModal: []
 }>()
 
-// Mock data for constructions - Only 8 constructions with unique images
-const constructionsData: Construction[] = [
+// Mock data for realisations - Only 8 realisations with unique images
+const realisationsData: Realisation[] = [
   {
     id: 1,
     name: "Complexe Résidentiel Les Jardins",
@@ -611,29 +611,29 @@ const constructionsData: Construction[] = [
   }
 ]
 
-const constructions = constructionsData
+const realisations = realisationsData
 const searchQuery = ref('')
 const selectedCategory = ref('Tous')
 const sortBy = ref('name')
 
 const categories = ['Tous', 'Résidentiel', 'Commercial', 'Éducatif', 'Santé', 'Infrastructure', 'Industriel', 'Culturel', 'Recherche']
 
-const filteredAndSortedConstructions = computed(() => {
-  let filtered = constructions
+const filteredAndSortedRealisations = computed(() => {
+  let filtered = realisations
 
   // Filter by category
   if (selectedCategory.value !== 'Tous') {
-    filtered = filtered.filter(construction => construction.category === selectedCategory.value)
+    filtered = filtered.filter(realisation => realisation.category === selectedCategory.value)
   }
 
   // Filter by search query
   if (searchQuery.value) {
     const query = searchQuery.value.toLowerCase()
-    filtered = filtered.filter(construction => 
-      construction.name.toLowerCase().includes(query) ||
-      construction.description.toLowerCase().includes(query) ||
-      construction.category.toLowerCase().includes(query) ||
-      construction.location.toLowerCase().includes(query)
+    filtered = filtered.filter(realisation => 
+      realisation.name.toLowerCase().includes(query) ||
+      realisation.description.toLowerCase().includes(query) ||
+      realisation.category.toLowerCase().includes(query) ||
+      realisation.location.toLowerCase().includes(query)
     )
   }
 
@@ -675,14 +675,14 @@ const clearFilters = () => {
   clearAllFilters()
 }
 
-const viewDetails = (construction: Construction) => {
-  selectedConstruction.value = construction
+const viewDetails = (realisation: Realisation) => {
+  selectedRealisation.value = realisation
   isDetailsModalOpen.value = true
 }
 
 const closeDetailsModal = () => {
   isDetailsModalOpen.value = false
-  selectedConstruction.value = null
+  selectedRealisation.value = null
 }
 
 const contactUs = () => {

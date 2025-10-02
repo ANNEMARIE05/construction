@@ -1,12 +1,12 @@
 <template>
-  <section id="equipment-section" class="py-20 bg-gray-500">
+  <section id="equipment-section" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
           Nos <span class="gradient-text">Engins</span>
         </h2>
-        <p class="text-gray-300 text-lg max-w-3xl mx-auto mb-8">
+        <p class="text-slate-600 text-lg max-w-3xl mx-auto mb-8">
           Découvrez notre large gamme d'engins de construction disponibles à la location
         </p>
         
@@ -18,8 +18,8 @@
             @click="filterByCategory(category)"
             class="px-6 py-3 font-semibold transition-all duration-300"
             :class="selectedCategory === category 
-              ? 'bg-yellow-400 text-gray-900' 
-              : 'bg-gray-700 text-white hover:bg-gray-600'"
+              ? 'bg-slate-800 text-white' 
+              : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
           >
             {{ category }}
           </button>
@@ -31,7 +31,7 @@
         <div 
           v-for="(equipment, index) in filteredEquipment" 
           :key="equipment.id"
-          class="group bg-gray-800 overflow-hidden hover-lift transition-all duration-300 hover:bg-gray-700 rounded-lg"
+          class="group bg-white overflow-hidden hover-lift transition-all duration-300 hover:bg-slate-50 rounded-lg shadow-lg border border-slate-200"
           :class="`animate-slide-up`"
           :style="`animation-delay: ${index * 0.1}s`"
         >
@@ -53,11 +53,11 @@
               </span>
             </div>
             <div class="absolute top-4 left-4">
-              <div class="flex items-center bg-gray-900/80 backdrop-blur-sm px-2 py-1">
-                <svg class="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <div class="flex items-center bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full">
+                <svg class="w-4 h-4 text-amber-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <span class="text-white text-sm font-medium">{{ equipment.rating }}</span>
+                <span class="text-slate-800 text-sm font-medium">{{ equipment.rating }}</span>
               </div>
             </div>
           </div>
@@ -65,15 +65,15 @@
           <!-- Content -->
           <div class="p-6">
             <div class="flex items-center justify-between mb-3">
-              <span class="text-yellow-400 text-sm font-medium">{{ equipment.category }}</span>
-              <span class="text-2xl font-bold text-white">{{ equipment.price.toLocaleString() }} FCFA</span>
+              <span class="text-slate-600 text-sm font-medium">{{ equipment.category }}</span>
+              <span class="text-2xl font-bold text-slate-800">{{ equipment.price.toLocaleString() }} FCFA</span>
             </div>
             
-            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+            <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-slate-600 transition-colors duration-300">
               {{ equipment.name }}
             </h3>
             
-            <p class="text-gray-300 text-sm mb-4 line-clamp-2">
+            <p class="text-slate-600 text-sm mb-4 line-clamp-2">
               {{ equipment.description }}
             </p>
 
@@ -82,7 +82,7 @@
               <span 
                 v-for="feature in equipment.features.slice(0, 2)" 
                 :key="feature"
-                class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded"
               >
                 {{ feature }}
               </span>
@@ -92,14 +92,14 @@
             <div class="flex gap-3">
               <button 
                 @click="viewDetails(equipment)"
-                class="flex-1 bg-transparent border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 px-4 py-2 font-semibold transition-all duration-300"
+                class="flex-1 bg-transparent border border-slate-300 text-slate-700 hover:bg-slate-100 px-4 py-2 font-semibold transition-all duration-300"
               >
                 Détails
               </button>
               <button 
                 @click="addToQuote(equipment)"
                 :disabled="!equipment.availability"
-                class="flex-1 bg-yellow-400 hover:bg-yellow-500 disabled:bg-gray-600 disabled:cursor-not-allowed text-gray-900 px-4 py-2 font-semibold transition-all duration-300"
+                class="flex-1 bg-slate-800 hover:bg-slate-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white px-4 py-2 font-semibold transition-all duration-300"
               >
                 {{ equipment.availability ? 'Ajouter au devis' : 'Indisponible' }}
               </button>
@@ -112,7 +112,7 @@
       <div class="text-center">
         <router-link 
           to="/equipment"
-          class="inline-flex items-center bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 px-8 py-4 font-semibold transition-all duration-300 hover:scale-105"
+          class="inline-flex items-center bg-transparent border-2 border-slate-300 text-slate-700 hover:bg-slate-100 px-8 py-4 font-semibold transition-all duration-300 hover:scale-105"
         >
           Voir tous les engins
           <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

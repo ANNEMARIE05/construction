@@ -1,12 +1,12 @@
 <template>
-  <section class="py-20 bg-gray-800">
+  <section class="py-20 bg-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
           Ce que disent nos <span class="gradient-text">Clients</span>
         </h2>
-        <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+        <p class="text-slate-600 text-lg max-w-3xl mx-auto">
           La satisfaction de nos clients est notre priorité. Découvrez leurs témoignages.
         </p>
       </div>
@@ -23,16 +23,16 @@
               :key="testimonial.id"
               class="w-full flex-shrink-0 px-4"
             >
-              <div class="bg-gray-700 p-8 md:p-12 text-center max-w-4xl mx-auto rounded-lg">
+              <div class="bg-white p-8 md:p-12 text-center max-w-4xl mx-auto rounded-lg shadow-lg">
                 <!-- Quote Icon -->
-                <div class="w-16 h-16 bg-yellow-400/20 flex items-center justify-center mx-auto mb-8">
-                  <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 bg-slate-100 flex items-center justify-center mx-auto mb-8">
+                  <svg class="w-8 h-8 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                   </svg>
                 </div>
 
                 <!-- Content -->
-                <blockquote class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                <blockquote class="text-xl md:text-2xl text-slate-700 mb-8 leading-relaxed">
                   "{{ testimonial.content }}"
                 </blockquote>
 
@@ -43,7 +43,7 @@
                       v-for="star in 5" 
                       :key="star"
                       class="w-6 h-6"
-                      :class="star <= testimonial.rating ? 'text-yellow-400' : 'text-gray-600'"
+                      :class="star <= testimonial.rating ? 'text-amber-500' : 'text-slate-300'"
                       fill="currentColor" 
                       viewBox="0 0 20 20"
                     >
@@ -95,7 +95,7 @@
           :key="index"
           @click="goToSlide(index)"
           class="w-3 h-3 transition-all duration-300"
-          :class="index === currentSlide ? 'bg-yellow-400' : 'bg-gray-600'"
+          :class="index === currentSlide ? 'bg-amber-500' : 'bg-slate-300'"
         ></button>
       </div>
 

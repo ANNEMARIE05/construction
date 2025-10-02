@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-900 border-t border-gray-700">
+  <footer class="bg-slate-50 border-t border-slate-200">
     <!-- Main Footer -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -11,11 +11,11 @@
             >
               <img src="../assets/logo.png" alt="" />
             </div>
-            <span class="text-white font-bold text-xl gradient-text"
+            <span class="text-slate-800 font-bold text-xl gradient-text"
               >AIGC - BTP</span
             >
           </div>
-          <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
+          <p class="text-slate-600 mb-6 max-w-md leading-relaxed">
             Votre partenaire de confiance pour la location d'engins de
             construction et la vente de matériel BTP. Des solutions
             professionnelles depuis plus de 15 ans.
@@ -23,10 +23,10 @@
           <div class="flex space-x-4">
             <a
               href="#"
-              class="w-10 h-10 bg-gray-800 hover:bg-yellow-400 flex items-center justify-center transition-all duration-300 magnetic"
+              class="w-10 h-10 bg-slate-200 hover:bg-slate-800 flex items-center justify-center transition-all duration-300 magnetic"
             >
               <svg
-                class="w-5 h-5 text-white hover:text-gray-900"
+                class="w-5 h-5 text-slate-600 hover:text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -37,10 +37,10 @@
             </a>
             <a
               href="#"
-              class="w-10 h-10 bg-gray-800 hover:bg-yellow-400 flex items-center justify-center transition-all duration-300 magnetic"
+              class="w-10 h-10 bg-slate-200 hover:bg-slate-800 flex items-center justify-center transition-all duration-300 magnetic"
             >
               <svg
-                class="w-5 h-5 text-white hover:text-gray-900"
+                class="w-5 h-5 text-slate-600 hover:text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -51,10 +51,10 @@
             </a>
             <a
               href="#"
-              class="w-10 h-10 bg-gray-800 hover:bg-yellow-400 flex items-center justify-center transition-all duration-300 magnetic"
+              class="w-10 h-10 bg-slate-200 hover:bg-slate-800 flex items-center justify-center transition-all duration-300 magnetic"
             >
               <svg
-                class="w-5 h-5 text-white hover:text-gray-900"
+                class="w-5 h-5 text-slate-600 hover:text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -65,10 +65,10 @@
             </a>
             <a
               href="#"
-              class="w-10 h-10 bg-gray-800 hover:bg-yellow-400 flex items-center justify-center transition-all duration-300 magnetic"
+              class="w-10 h-10 bg-slate-200 hover:bg-slate-800 flex items-center justify-center transition-all duration-300 magnetic"
             >
               <svg
-                class="w-5 h-5 text-white hover:text-gray-900"
+                class="w-5 h-5 text-slate-600 hover:text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -82,12 +82,12 @@
 
         <!-- Quick Links -->
         <div>
-          <h3 class="text-white font-bold text-lg mb-6">Liens rapides</h3>
+          <h3 class="text-slate-800 font-bold text-lg mb-6">Liens rapides</h3>
           <ul class="space-y-3">
             <li v-for="link in quickLinks" :key="link.name">
               <router-link
                 :to="link.href"
-                class="text-gray-300 hover:text-yellow-400 transition-colors duration-300 magnetic"
+                class="text-slate-600 hover:text-slate-800 transition-colors duration-300 magnetic"
               >
                 {{ link.name }}
               </router-link>
@@ -97,11 +97,11 @@
 
         <!-- Contact Info -->
         <div>
-          <h3 class="text-white font-bold text-lg mb-6">Contact</h3>
+          <h3 class="text-slate-800 font-bold text-lg mb-6">Contact</h3>
           <div class="space-y-4">
             <div class="flex items-start space-x-3">
               <svg
-                class="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0"
+                class="w-5 h-5 text-slate-600 mt-1 flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -119,14 +119,14 @@
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <div class="text-gray-300 text-sm">
+              <div class="text-slate-600 text-sm">
                 <div>Côte d'Ivoire</div>
                 <div>BP - 124 Bouake 01</div>
               </div>
             </div>
             <div class="flex items-center space-x-3">
               <svg
-                class="w-5 h-5 text-yellow-400 flex-shrink-0"
+                class="w-5 h-5 text-slate-600 flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -138,13 +138,13 @@
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span class="text-gray-300 text-sm"
+              <span class="text-slate-600 text-sm"
                 >(+225) 07 08 31 89 76 / 07 08 11 11 32</span
               >
             </div>
             <div class="flex items-center space-x-3">
               <svg
-                class="w-5 h-5 text-yellow-400 flex-shrink-0"
+                class="w-5 h-5 text-slate-600 flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -156,7 +156,7 @@
                   d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span class="text-gray-300 text-sm">infos@aigcbtp.com</span>
+              <span class="text-slate-600 text-sm">infos@aigcbtp.com</span>
             </div>
           </div>
         </div>
@@ -164,28 +164,28 @@
     </div>
 
     <!-- Bottom Footer -->
-    <div class="border-t border-gray-700">
+    <div class="border-t border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="text-gray-400 text-sm mb-4 md:mb-0">
+          <div class="text-slate-500 text-sm mb-4 md:mb-0">
             © 2025. AIGC - BTP. Tous droits réservés.
           </div>
           <div class="flex space-x-6 text-sm">
             <a
               href="#"
-              class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 magnetic"
+              class="text-slate-500 hover:text-slate-800 transition-colors duration-300 magnetic"
             >
               Mentions légales
             </a>
             <a
               href="#"
-              class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 magnetic"
+              class="text-slate-500 hover:text-slate-800 transition-colors duration-300 magnetic"
             >
               Politique de confidentialité
             </a>
             <a
               href="#"
-              class="text-gray-400 hover:text-yellow-400 transition-colors duration-300 magnetic"
+              class="text-slate-500 hover:text-slate-800 transition-colors duration-300 magnetic"
             >
               CGV
             </a>
@@ -200,7 +200,7 @@
 const quickLinks = [
   { name: "ACCUEIL", href: "/" },
   { name: "À PROPOS", href: "/about" },
-  { name: "NOS CONSTRUCTIONS", href: "/constructions" },
+  { name: "NOS RÉALISATIONS", href: "/realisations" },
   { name: "ÉQUIPEMENT", href: "/equipment" },
   { name: "CONTACT", href: "/contact" },
 ];
