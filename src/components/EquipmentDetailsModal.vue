@@ -8,16 +8,16 @@
       ></div>
 
       <!-- Modal panel -->
-      <div class="inline-block align-bottom bg-white text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+      <div class="inline-block align-bottom bg-gray-800 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
         <!-- Header -->
-        <div class="bg-slate-100 px-6 py-4 border-b border-slate-200">
+        <div class="bg-gray-700 px-6 py-4 border-b border-gray-600">
           <div class="flex items-center justify-between">
-            <h3 class="text-xl font-bold text-slate-800">
+            <h3 class="text-xl font-bold text-white">
               Détails de l'équipement
             </h3>
             <button 
               @click="closeModal"
-              class="text-slate-500 hover:text-slate-700 transition-colors duration-300"
+              class="text-gray-400 hover:text-white transition-colors duration-300"
             >
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

@@ -21,19 +21,19 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Content -->
           <div>
-            <div class="w-16 h-1 bg-amber-500 mb-6"></div>
-            <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 constructo-heading">
+            <div class="w-16 h-1 bg-yellow-400 mb-6"></div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 constructo-heading">
               À PROPOS DE NOUS
             </h2>
-            <p class="text-slate-800 text-lg font-bold mb-6 constructo-text">
+            <p class="text-gray-900 text-lg font-bold mb-6 constructo-text">
               NOTRE ENTREPRISE DE CONSTRUCTION A ÉTÉ FONDÉE IL Y A 10 ANS, AU SOMMET DE LA FRÉNÉSIE DE CONSTRUCTION EN FRANCE...
             </p>
-            <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
               Avec plus de 15 ans d'expérience dans le secteur du BTP, ArchiBat s'est imposé comme 
               un leader de la location d'engins de construction et de la vente de matériel. 
               Notre engagement envers l'excellence et la satisfaction client nous distingue.
             </p>
-            <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
               Nous proposons une large gamme d'équipements modernes, maintenus selon les plus hauts 
               standards, accompagnés d'un service client exceptionnel et d'un support technique 24h/7j.
             </p>
@@ -58,7 +58,7 @@
     </section>
     
     <!-- Statistics Section -->
-    <section ref="statsSection" class="relative py-20 bg-slate-100">
+    <section ref="statsSection" class="relative py-20 bg-gray-900">
       <!-- Background Image -->
       <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
            style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop');">
@@ -74,35 +74,35 @@
             :class="{ 'animate-fade-in-up': statsVisible }"
             :style="{ animationDelay: `${index * 0.2}s` }"
           >
-            <div class="text-4xl md:text-5xl font-bold text-amber-600 mb-2">
+            <div class="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
               {{ statsVisible ? stat.animatedValue : '0' }}
             </div>
-            <div class="text-slate-700 text-lg font-semibold constructo-text">{{ stat.label }}</div>
+            <div class="text-white text-lg font-semibold constructo-text">{{ stat.label }}</div>
           </div>
         </div>
       </div>
     </section>
     
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-slate-100 to-slate-200">
+    <section class="py-20 bg-gradient-to-r from-yellow-400 to-yellow-500">
       <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Prêt à démarrer votre projet ?
         </h2>
-        <p class="text-slate-700 text-lg mb-8 max-w-2xl mx-auto">
+        <p class="text-gray-800 text-lg mb-8 max-w-2xl mx-auto">
           Contactez-nous dès aujourd'hui pour obtenir un devis personnalisé et découvrir 
           comment nous pouvons vous accompagner dans la réussite de votre projet.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <button 
             @click="openQuoteModal"
-            class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            class="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
           >
             Demander un devis gratuit
           </button>
           <router-link 
             to="/contact"
-            class="bg-transparent border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 text-center"
+            class="bg-transparent border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 text-center"
           >
             Nous contacter
           </router-link>

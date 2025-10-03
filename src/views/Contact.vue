@@ -218,25 +218,25 @@
     </section>
 
     <!-- Map Section -->
-    <section class="py-20 bg-slate-100">
+    <section class="py-20 bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-slate-800 mb-4">
+          <h2 class="text-3xl font-bold text-white mb-4">
             Nous <span class="gradient-text">Trouver</span>
           </h2>
-          <p class="text-slate-600 text-lg">
+          <p class="text-gray-300 text-lg">
             Visitez nos locaux ou contactez-nous pour un rendez-vous
           </p>
         </div>
         
-        <div class="bg-white overflow-hidden shadow-lg rounded-lg">
-          <div class="h-96 bg-slate-200 flex items-center justify-center">
+        <div class="bg-gray-800 overflow-hidden">
+          <div class="h-96 bg-gray-300 flex items-center justify-center">
             <div class="text-center">
-              <svg class="w-16 h-16 text-slate-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-16 h-16 text-gray-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <p class="text-slate-500">Carte interactive (intégration Google Maps)</p>
+              <p class="text-gray-500">Carte interactive (intégration Google Maps)</p>
             </div>
           </div>
         </div>

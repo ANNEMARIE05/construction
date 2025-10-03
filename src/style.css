@@ -6,13 +6,13 @@
 
 :root {
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --primary-light: #f8fafc;
-  --secondary-light: #e2e8f0;
-  --accent-gold: #f59e0b;
-  --accent-gold-dark: #d97706;
+  --primary-dark: #1f2937;
+  --secondary-dark: #374151;
+  --accent-gold: #facc15;
+  --accent-gold-dark: #eab308;
   --text-white: #ffffff;
-  --text-gray: #64748b;
-  --text-dark: #1e293b;
+  --text-gray: #6b7280;
+  --text-dark: #1f2937;
 }
 
 html {
@@ -55,7 +55,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: linear-gradient(135deg, #facc15, #eab308);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -78,7 +78,7 @@ body {
 
 .constructo-button {
   background-color: var(--accent-gold);
-  color: var(--text-white);
+  color: var(--text-dark);
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -90,7 +90,7 @@ body {
 .constructo-button:hover {
   background-color: var(--accent-gold-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 12px rgba(250, 204, 21, 0.3);
 }
 
 /* Glass effect */
@@ -108,7 +108,7 @@ body {
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(245, 158, 11, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(250, 204, 21, 0.1);
 }
 
 /* Interactive button effects */
@@ -136,7 +136,7 @@ body {
 
 .btn-interactive:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(250, 204, 21, 0.3);
 }
 
 /* Magnetic effect */
@@ -178,7 +178,7 @@ body {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #f59e0b, #d97706, #f59e0b);
+  background: linear-gradient(45deg, #facc15, #eab308, #facc15);
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
@@ -268,8 +268,8 @@ body {
 }
 
 @keyframes glow {
-  0% { box-shadow: 0 0 5px #f59e0b; }
-  100% { box-shadow: 0 0 20px #f59e0b, 0 0 30px #f59e0b; }
+  0% { box-shadow: 0 0 5px #facc15; }
+  100% { box-shadow: 0 0 20px #facc15, 0 0 30px #facc15; }
 }
 
 .animate-fade-in {
